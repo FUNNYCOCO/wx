@@ -125,7 +125,11 @@ let baseWebpackConfig = {
         ignore: ['.*']
       }
     ])
-  ]
+  ],
+  node: {
+    fs: 'empty',
+    child_process: 'empty'
+  }
 }
 
 // 针对百度小程序，由于不支持通过 miniprogramRoot 进行自定义构建完的文件的根路径
